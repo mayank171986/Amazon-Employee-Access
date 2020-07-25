@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body id="container" style="background-color:#FFFF" >
+   		<div id="header">
+   			{% block head %}
+				<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no'/>
+				<meta charset="UTF-8">
+				<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+				<!-- jQuery -->
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+				<!-- Semantic Main CSS -->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+				<!-- Semantic Reset CSS -->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/reset.min.css"/>
+				<!-- Semantic Menu CSS -->
+				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/components/menu.min.css"/>
+				<!-- Main Semantic JS  -->
+			    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+				<!-- Custom CSS -->
+				<link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+				<!-- Browser tab name -->
+				<title>{{ title }}</title>
+				<!-- Navbar -->
+				<div class="ui attached inverted menu">
+				  	<nav class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar nbg-primary py-md-2  bg-dark">
+				  		<a class="navbar-brand" href="{{ url_for('home') }}">AI Pneumonia Scan</a>
+				  	</nav>
+				</div>
+			{% endblock %}
+   		</div>
+   		<div class="row">
+
+   <div class="col-sm-12 my-auto">
+    		<div id="body" class="body" >
+   			<center>
+
+<div class="mx-auto">
+
+	<img  src="https://s7.gifyu.com/images/logo1b724e2d18f928fc.png" width="400" height="80">
+
+	<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+
+<body>
+	<div class="container">
+
+	{% block content %}{% endblock %}
+	</div>
+
+</body>
+</div>
+</center>
+   		</div>
+		<div id="footer">
+			<div class="ui divider"></div>
+	    		<div class="ui divided horizontal footer link list">
+			      
+	    		</div>
+	  		</div>
+		</div>
+	</body>
+
+   </div>
+</div>
+</html>

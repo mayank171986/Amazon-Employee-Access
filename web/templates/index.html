@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
+<body>
+	<div style="margin-top: 125px; margin-bottom:50px;">
+	<form action="/uploader" method="post" enctype = "multipart/form-data">
+      Select image to upload:
+      <input type="file"  name="fileToUpload" align="center">
+      <input type="submit" class="btn btn-primary" value = "Predict" name="submit" align="center">
+    </form>
+    </div>
+</body>
+</html>
+<h2 class = "ui headwe"></h2>
+
+{% endblock %}
