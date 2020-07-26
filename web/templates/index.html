@@ -1,20 +1,92 @@
-{% extends "layout.html" %}
-
-{% block content %}
-
 <!DOCTYPE html>
-<html>
-<head><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></head>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Amazon Employee Access</title>
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- JS files: jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
 <body>
-	<div style="margin-top: 125px; margin-bottom:50px;">
-	<form action="/uploader" method="post" enctype = "multipart/form-data">
-      Select image to upload:
-      <input type="file"  name="fileToUpload" align="center">
-      <input type="submit" class="btn btn-primary" value = "Predict" name="submit" align="center">
+<div class="container">
+    <h4>Amazon Employee Access</h4>
+</div>
+<div class="container">
+    <form action="/predict" method="post">
+        <div class="form-group row">
+            <label for="input_resource" class="col-sm-2 col-form-label">RESOURCE</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="input_resource" name="input_resource" placeholder="RESOURCE"
+                       required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="input_mgr_id" class="col-sm-2 col-form-label">MGR_ID</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="input_mgr_id" name="input_mgr_id" placeholder="MGR_ID"
+                       required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="input_role_rollup_1" class="col-sm-2 col-form-label">ROLE_ROLLUP_1</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="input_role_rollup_1" name="input_role_rollup_1"
+                       placeholder="ROLE_ROLLUP_1" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="input_role_rollup_2" class="col-sm-2 col-form-label">ROLE_ROLLUP_2</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="input_role_rollup_2" name="input_role_rollup_2"
+                       placeholder="ROLE_ROLLUP_2" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="input_role_deptname" class="col-sm-2 col-form-label">ROLE_DEPTNAME</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="input_role_deptname" name="input_role_deptname"
+                       placeholder="ROLE_DEPTNAME" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="input_role_title" class="col-sm-2 col-form-label">ROLE_TITLE</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="input_role_title" name="input_role_title"
+                       placeholder="ROLE_TITLE" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="input_role_family_desc" class="col-sm-2 col-form-label">ROLE_FAMILY_DESC</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="input_role_family_desc" name="input_role_family_desc"
+                       placeholder="ROLE_FAMILY_DESC"
+                       required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="input_role_family" class="col-sm-2 col-form-label">ROLE_FAMILY</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="input_role_family" name="input_role_family"
+                       placeholder="ROLE_FAMILY" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="input_role_code" class="col-sm-2 col-form-label">ROLE_CODE</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="input_role_code" name="input_role_code"
+                       placeholder="ROLE_CODE" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary">Predict</button>
+            </div>
+        </div>
     </form>
-    </div>
+</div>
 </body>
 </html>
-<h2 class = "ui headwe"></h2>
-
-{% endblock %}
